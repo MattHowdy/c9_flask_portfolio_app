@@ -35,11 +35,11 @@ def add_numbers_post():
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 	  elif request.method == 'POST':
   	      print(request.form['text'].split())
-  	      total = 1
+  	      total_2 = 1
   	      try:
   	      	for str_num in request.form['text'].split():
-  	      		total *= int(str_num)
-  	      	return render_template('add_numbers.html', result=str(total))
+  	      		total_2 *= int(str_num)
+  	      	return render_template('add_numbers.html', result_2=str(total_2))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 	
