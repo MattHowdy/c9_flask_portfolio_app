@@ -33,7 +33,7 @@ def add_numbers_post():
   	      	return render_template('add_numbers.html', result_1=str(total_1))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
-	  elif request.method == 'POST':
+	  request.method == 'POST':
   	      print(request.form['text'].split())
   	      total_2 = 1
   	      try:
