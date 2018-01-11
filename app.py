@@ -27,22 +27,14 @@ def add_numbers_post():
 	  if request.method == 'POST':
   	      print(request.form['text'].split())
   	      total_1 = 0
+	      total_2 = 1
   	      try:
   	      	for str_num in request.form['text'].split():
   	      		total_1 += int(str_num)
-  	      	return render_template('add_numbers.html', result_1=str(total_1))
+			total_2 *= int(str_num)
+  	      	return render_template('add_numbers.html', result_1=str(total_1), result_2=str(total_2))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
-	  if request.method == 'POST':
-  	      print(request.form['text'].split())
-  	      total_2 = 1
-  	      try:
-  	      	for str_num_2 in request.form['text'].split():
-  	      		total_2 *= int(str_num_2)
-  	      	return render_template('add_numbers.html', result_2=str(total_2))
-  	      except ValueError:
-  	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
-	
 	
 	
 	
