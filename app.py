@@ -24,13 +24,13 @@ def add_numbers_post():
 	  # print(type(request.form['text']))
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html')
-	  if request.method == 'POST':
+	  elif request.method == 'POST':
   	      print(request.form['text'].split())
   	      total_1 = 0
 	      total_2 = 1
   	      try:
   	      	for str_num in request.form['text'].split():
-  	      		total_1 += int(str_num)
+  	      		total_1 += int(str_num),
 			total_2 *= int(str_num)
   	      	return render_template('add_numbers.html', result_1=str(total_1), result_2=str(total_2))
   	      except ValueError:
