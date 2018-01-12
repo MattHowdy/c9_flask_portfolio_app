@@ -31,7 +31,7 @@ def add_numbers_post():
   	      total_2 = 1
   	      total_3 = 0
   	      total_4 = 0
-  	      total_4_counter = len(request.form['text'].split()
+  	      total_4_counter = len(request.form['text'].split())
   	      try:
   	      	for str_num in request.form['text'].split():
   	      		total_1 += int(str_num)
