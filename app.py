@@ -22,11 +22,12 @@ def profile(name):
 def add_numbers_post():
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
+	total_2 = 1
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
   	      print(request.form['text'].split())
-  	      total_1 = 0 , total_2 = 1
+  	      total_1 = 0 
   	      try:
   	      	for str_num in request.form['text'].split():
   	      		total_1 += int(str_num)
