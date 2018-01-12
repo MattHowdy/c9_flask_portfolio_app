@@ -29,13 +29,16 @@ def add_numbers_post():
   	      print(request.form['text'].split())
   	      total_1 = 0
   	      total_2 = 1
-  	      total_3 = 0 
+  	      total_3 = 0
+  	      total_4 = 0
+  	      total_4_counter = len(number.split()
   	      try:
   	      	for str_num in request.form['text'].split():
   	      		total_1 += int(str_num)
   	      		total_2 *= int(str_num)
   	      		total_3 = total_1 ** 2
-  	      	return render_template('add_numbers.html', result_1=str(total_1), result_2=str(total_2), result_3=str(total_3) )
+  	      		total_4 = total_1/ total_4_counter
+  	      	return render_template('add_numbers.html', result_1=str(total_1), result_2=str(total_2), result_3=str(total_3), result_4=str(total_4) )
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
 	
